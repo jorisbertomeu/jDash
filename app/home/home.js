@@ -62,4 +62,8 @@ angular.module('jDash.home', ['ngRoute'])
 	    loadPlugins();
     };
 
+})
+
+.controller("InfosCtrl", function($scope) {
+		$scope.toto = "bijour";
 });
