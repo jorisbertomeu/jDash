@@ -1,14 +1,26 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('jDash', [
   'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+  'jDash.home',
+  'jDash.view2',
+  'jDash.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  $routeProvider.otherwise({redirectTo: '/home'});
+}])
+
+.controller('MainCtrl', function($scope, $timeout) {
+	$scope.clock = "Loading clock...";
+    $scope.tickInterval = 1000;
+
+    var tick = function () {
+        $scope.clock = Date.now();
+        $timeout(tick, $scope.tickInterval);
+    }
+
+    $timeout(tick, $scope.tickInterval);
+});

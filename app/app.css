@@ -1,25 +1,36 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+body {
+	padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.menu:before {
-  content: "[";
+#pinBoot {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
 }
 
-.menu:after {
-  content: "]";
+.white-panel {
+ 	border: 1px solid #E1E1E1;
+	position: absolute;
+	background-color: #fff;
+	padding: 10px;
+}
+/*
+stylize any heading tags withing white-panel below
+*/
+
+.white-panel .header {
+  	background-color: #EEEEEE;
+    margin: -10px;
+    margin-bottom: 10px;
+    padding: 6px;
+    border-bottom: 1px solid #E1E1E1;
+    font-weight: bold;
+    text-align: center;
 }
 
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.white-panel h1 a {
+  color: #A92733;
 }

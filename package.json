@@ -23,6 +23,7 @@
     "postupdate-deps": "bower update",
 
     "prestart": "npm install",
+    "nodemon": "nodemon",
     "start": "http-server -a localhost -p 8000 -c-1 ./app",
 
     "pretest": "npm install",
