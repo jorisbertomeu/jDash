@@ -1,0 +1,16 @@
+{
+  "name": "jDAsh",
+  "version": "0.1",
+  "description": "The Geek Dashboard",
+  "repository": "https://github.com/jorisbertomeu/jDash",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "html5-boilerplate": "^5.3.0"
+  }
+}
+
