@@ -3,7 +3,7 @@
 
       <article class="white-panel" ng-repeat="plugin in plugins">
         <div class="header">{{plugin.content.title}}</div>
-        <ng-include src="components/infos/infos.html"></ng-include>
+        <ng-include src="templateUrl(plugin.content.templateUrl)"></ng-include>
       </article>
 
     </section>

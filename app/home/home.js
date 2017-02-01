@@ -14,6 +14,7 @@ angular.module('jDash.home', ['ngRoute'])
 
 	$scope.trustHtml = trustHtml;
 	$scope.compileHtml = compileHtml;
+	$scope.templateUrl = templateUrl;
 
 	$scope.plugins = [];
 
@@ -21,6 +22,10 @@ angular.module('jDash.home', ['ngRoute'])
 
 	function trustHtml(html) {
 		return $sce.trustAsHtml(html);
+	}
+
+	function templateUrl(url) {
+		return $sce.trustAsResourceUrl(url);
 	}
 
 	function compileHtml(html, scope) {
@@ -31,7 +36,7 @@ angular.module('jDash.home', ['ngRoute'])
 		$scope.plugins.push({
 			content: {
 				title: 'Infos',
-				html: '{{plugins}}'
+				templateUrl: 'https://cdn.rawgit.com/jorisbertomeu/jDash/master/app/components/infos/infos.html'
 			},
 			author: {
 				name: 'Joris Bertomeu',
